@@ -5,11 +5,11 @@ import {
   Text,
   View,
   FlatList,
+  TouchableOpacity,
 } from 'react-native';
 import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const {width, height} = Dimensions.get('window');
 
@@ -215,14 +215,17 @@ const Home = () => {
         style={{
           flexDirection: 'row',
           justifyContent: 'space-between',
-          marginTop: 10,
+          marginTop: 15,
           width: width * 0.9,
           height: 'auto',
           alignSelf: 'center',
         }}>
         <TouchableOpacity
+          onPress={() => {
+            navigation.push('Excercise');
+          }}
           style={{
-            width: 140,
+            width: 150,
             height: 40,
             backgroundColor: 'skyblue',
             borderRadius: 10,
@@ -236,7 +239,7 @@ const Home = () => {
         </TouchableOpacity>
         <View
           style={{
-            width: 140,
+            width: 150,
             height: 40,
             backgroundColor: 'purple',
             borderRadius: 10,
@@ -248,6 +251,40 @@ const Home = () => {
             Refresh
           </Text>
         </View>
+      </View>
+      <View style={{marginTop: 10}}>
+        <View
+          style={{
+            width: 150,
+            height: 40,
+            borderRadius: 10,
+            backgroundColor: 'blue',
+            alignSelf: 'center',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Text style={{fontSize: 15, color: 'white', fontWeight: 'bold'}}>
+            View Profile
+          </Text>
+        </View>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.push('Login');
+          }}
+          style={{
+            width: 150,
+            height: 40,
+            marginTop: 10,
+            borderRadius: 10,
+            backgroundColor: 'red',
+            alignSelf: 'center',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Text style={{fontSize: 15, color: 'white', fontWeight: 'bold'}}>
+            Log Out
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

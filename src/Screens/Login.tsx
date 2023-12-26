@@ -34,7 +34,7 @@ const Login = () => {
           height: height * 0.23,
           alignSelf: 'center',
           // backgroundColor: 'white',
-          marginTop: 10,
+          marginTop: 50,
           justifyContent: 'center',
           alignItems: 'center',
         }}>
