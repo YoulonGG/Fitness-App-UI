@@ -1,11 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Rout from './src/Component/Rout';
 
-const App = () => {
-  return <Rout />;
+const Excercise = () => {
+  return (
+    <View>
+      <Text>Excercise</Text>
+    </View>
+  );
 };
 
-export default App;
+export default Excercise;
 
 const styles = StyleSheet.create({});
